@@ -611,7 +611,6 @@
                         <p>750</p>
                     </div>
                 </div>
-                
                 <!-- PRODUCTO 3 -->
                 <div class="product-card">
                     <div class="product-image">
@@ -817,6 +816,16 @@
     <script>
         // Script simple para añadir interactividad
         document.addEventListener('DOMContentLoaded', function() {
+            // Efecto de hover para las tarjetas de producto
+            const productCards = document.querySelectorAll('.product-card');
+            
+            productCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    // Aquí podrías añadir funcionalidad para ver detalles del producto
+                    console.log('Producto seleccionado:', this.querySelector('.product-name p').textContent);
+                });
+            });
+            
             // Añadir efectos de sonido retro al hacer clic en los enlaces (opcional)
             const links = document.querySelectorAll('a');
             links.forEach(link => {
@@ -828,3 +837,4 @@
         });
     </script>
 </body>
+</html>
